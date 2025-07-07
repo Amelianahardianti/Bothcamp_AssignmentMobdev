@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563116242429",
+    "project_id": "bootcampteti",
+    "storage_bucket": "bootcampteti.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563116242429:android:ca4e30b122637a8b4e5594",
+        "android_client_info": {
+          "package_name": "com.example.mybatagor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxPi1KB6aTlPGqlFh0hR_rarSJd4l2sU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
