@@ -17,6 +17,8 @@
             android:exported="true" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".TodoListActivity" />
+
         <activity
             android:name=".splashscreen"
             android:exported="true">

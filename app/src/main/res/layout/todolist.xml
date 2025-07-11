@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:background="@color/white">
 
-
+    <!-- AppBar + Toolbar -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
         android:fitsSystemWindows="true"
-        app:elevation="0dp">
+        app:elevation="4dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -20,13 +23,12 @@
             android:background="@color/two"
             app:logo="@mipmap/ic_launcher"
             app:title="My Batagor"
-            app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall"
             app:titleTextColor="@color/one"
-            android:layout_gravity="start" />
-
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:navigationIconTint="@color/one" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- isi content -->
+    <!-- Konten Scrollable -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,7 +40,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Header Card -->
+            <!-- Header -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +73,7 @@
                         android:textColor="@color/two"
                         android:textStyle="bold" />
 
-                    <!-- stat row -->
+                    <!-- Statistik -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -100,7 +102,6 @@
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="@color/two"
                                 android:alpha="0.7" />
-
                         </LinearLayout>
 
                         <LinearLayout
@@ -125,16 +126,12 @@
                                 android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                                 android:textColor="@color/two"
                                 android:alpha="0.7" />
-
                         </LinearLayout>
-
                     </LinearLayout>
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- section header -->
+            <!-- Label Section -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,7 +141,7 @@
                 android:textColor="@color/one"
                 android:textStyle="bold" />
 
-            <!-- Tasks RecyclerView Container -->
+            <!-- RecyclerView Task -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -162,14 +159,11 @@
                     android:clipToPadding="false"
                     android:nestedScrollingEnabled="false"
                     android:padding="8dp" />
-
             </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
-    <!-- floating button bezir -->
+    <!-- FAB -->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fabAddTask"
         android:layout_width="wrap_content"
@@ -183,5 +177,4 @@
         app:tint="@color/one"
         app:cornerRadius="16dp"
         app:elevation="6dp" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
